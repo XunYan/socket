@@ -3,8 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
+  <script src="javascripts/vue.js"></script>
+  <style>
+    .chatZone{
+      width: 20rem;
+      height: 10rem;
+      color: #ffffff;
+      background-color: #aaaaaa;
+      font-size: 1rem;
+    }
+    .sendMsg{
+
+    }
+    .send{
+      background-color: #1e53ff;
+      color: #ffffff;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-<div>11111</div>
+<div id="app">
+  <div class="chatZone">
+
+  </div>
+  <div class="sendMsg">
+    <div>
+      <input type="text">
+      <span v-on:click="sendMSG" class="send">send</span>
+    </div>
+  </div>
+  <div>
+    <p>change nickname : /nick [username]</p>
+    <p>join/create room: /join [room name]</p>
+  </div>
+</div>
+<script>
+  const vm = new Vue({
+    el:"#app",
+    data(){
+      return{
+
+      }
+    },
+    methods:{
+      sendMSG:function () {
+        console.log(1)
+      }
+    }
+  })
+</script>
+
 </body>
 </html>
